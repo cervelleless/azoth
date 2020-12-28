@@ -31,7 +31,7 @@
 (define-minor-mode sulfur-cmd-mode
   "A Vi-like command mode."
   :init-value t
-  :lighter " Sulfur-cmd"
+  :lighter " Sulfur"
   :keymap sulfur-cmd-map
   (setq cursor-type 'box)
   (add-to-ordered-list 'emulation-mode-map-alists `((sulfur-cmd-mode . ,sulfur-cmd-map)) 0))
@@ -129,17 +129,22 @@
 		(t (message "d %s is undefined" (char-to-string key))))
 	(message "Quit")))))
 
+;;; Need more tests
 ;;;###autoload
 (defun sulfur/colon-cmd ()
   "Ex-like command."
   (interactive)
   (let ((key (read-string ":")))
-    (cond ((string-equal key "w") (call-interactively 'save-buffer))
-          ((string-equal key "wq") (progn (call-interactively 'save-buffer)
-                                         (quit-window)
-                                         (switch-to-buffer "*astrolabe*")))
-	  ((string-equal key "q!") (progn (quit-window)
-					 (switch-to-buffer "*astrolabe*")))
+    (cond ((string= key "w") (call-interactively 'save-buffer))
+	  ((string= key "c") (message "%s is c" key))
+          ((string= key "wq") (progn (call-interactively 'save-buffer)
+                                     (kill-current-buffer)
+                                     (switch-to-buffer "*astrolabe*")))
+	  ((string= key "q") (when (kill-current-buffer)
+			       (switch-to-buffer "*astrolabe*")))
+	  ((string= key "q!") (progn (set-buffer-modified-p nil)
+				     (kill-current-buffer)
+				     (switch-to-buffer "*astrolabe*")))
           (t (message "%s is undefined" key)))))
 
 ;;;###autoload

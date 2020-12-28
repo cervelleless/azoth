@@ -19,6 +19,8 @@
 ;;
 ;;; Code:
 
+
+;;; projectile
 (use-package projectile
   :straight t
   :hook (after-init . projectile-mode)

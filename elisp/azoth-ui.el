@@ -25,11 +25,7 @@
 ;;; Font and frame size
 ;; frame size
 (setq initial-frame-alist
-      '((top . 1) (left . 10) (width  . 280) (height . 150)))
-
-;; font
-(add-to-list 'default-frame-alist
-             '(font . "M+ 1mn Light-18"))
+      (quote ((fullscreen . maximized))))
 
 ;;; Remove menu-bar, scroll-bar and tool-bar.
 (menu-bar-mode -1)
@@ -48,7 +44,7 @@
   :straight t
   :init
   (setq visual-fill-column-inhibit-sensible-window-split t
-	visual-fill-column-width 80)
+	visual-fill-column-width 100)
   :hook
   (text-mode . visual-line-mode)
   (prog-mode . visual-line-mode)

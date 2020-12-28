@@ -29,13 +29,11 @@
   :hook
   (emacs-lisp-mode . lispy-mode)
   (scheme-mode . lispy-mode)
-  (racket-mode . lispy-mode)
-  (lispy-mode . show-paren-mode))
+  (racket-mode . lispy-mode))
 
 ;; elisp-slime-nav
 (use-package elisp-slime-nav
   :straight t
-  :defer t
   :hook
   (emacs-lisp-mode . elisp-slime-nav-mode))
 
@@ -46,7 +44,6 @@
 ;; racket-mode
 (use-package racket-mode
   :straight t
-  :defer t
   :hook
   (racket-mode . lispy-mode)
   (racket-mode . racket-xp-mode))

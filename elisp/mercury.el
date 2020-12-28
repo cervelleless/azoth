@@ -58,7 +58,8 @@
 ;; buffers
 (defhydra mercury-buffers (:color blue :columns 5)
   "Buffers & Bookmarks"
-  ("c" consult-bookmark "consult-bookmark")
+  ("b" consult-bookmark "consult-bookmark")
+  ("c" crux-kill-other-buffers "Kill other buffers")
   ("i" ibuffer "ibuffer")
   ("n" next-buffer "Next buffer")
   ("p" previous-buffer "Previous buffer")

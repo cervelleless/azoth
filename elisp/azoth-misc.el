@@ -72,5 +72,46 @@
   (setq undo-tree-visualizer-timestamps t
         undo-tree-visualizer-diff t))
 
+(use-package expand-region
+  :straight t
+  :defer t)
+
+(use-package saveplace
+  :hook (after-init . save-place-mode))
+
+(use-package auto-compile
+  :straight t
+  :defer t)
+
+(use-package rainbow-mode
+  :straight t
+  :defer t)
+
+(use-package ace-window
+  :straight t
+  :defer t)
+
+(use-package super-save
+  :straight t
+  :defer t)
+
+;; eazy-kill
+(use-package easy-kill
+  :straight t
+  :defer t)
+
+;; ranger
+(use-package ranger
+  :straight t
+  :defer t)
+
+;; flyspell
+(use-package flyspell
+  :straight t
+  :defer t
+  :init
+  (setq ispell-program-name "/usr/local/bin/aspell")
+  :hook (emacs-lisp-mode . flyspell-prog-mode))
+
 (provide 'azoth-misc)
 ;;; azoth-misc.el ends here

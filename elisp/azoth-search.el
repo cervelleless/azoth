@@ -23,5 +23,8 @@
   :straight t
   :defer t)
 
+(use-package rg
+  :straight t)
+
 (provide 'azoth-search)
 ;;; azoth-search.el ends here

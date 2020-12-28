@@ -25,6 +25,36 @@
 ;; y-or-n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; disable vc
+(setq vc-handled-backends nil)
+
+;; custom variables
+(setq custom-file (concat user-emacs-directory "private/custom.el"))
+(setq auto-save-list-file-prefix (concat user-emacs-directory "private/autosave/"))
+
+;; warn when opening files bigger than 100MB
+(setq large-file-warning-threshold (* 100 1000 1000))
+
+;;
+(setq load-prefer-newer t)
+
+;; GNUS cann't send email error
+(add-to-list 'exec-path "/usr/local/bin/")
+;; shell-command-to-string error
+(setenv "PATH"
+        (concat "/usr/local/bin/:"
+                "/usr/local/opt/coreutils/libexec/gnubin/:"
+                (getenv "PATH")))
+;; eshll-mode command cann't found
+(eval-after-load 'esh-util
+  '(progn
+     (setq eshell-path-env (concat "/usr/local/bin/:" "/usr/local/opt/coreutils/libexec/gnubin/:" eshell-path-env))))
+
+;; inhibit startup screen
+(setq inhibit-startup-screen t)
+
+;; Set up the visible bell
+(setq visible-bell t)
 
 ;;; envrc
 (use-package envrc
