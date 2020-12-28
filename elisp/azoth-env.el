@@ -19,15 +19,17 @@
 ;;
 ;;; Code:
 
-(eval-when-compile
-  (require 'use-package))
-;; (require 'bind-key)
+;;; some settings
+(setq indent-tabs-mode nil)
+
+;; y-or-n
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 
-
-
-
-
+;;; envrc
+(use-package envrc
+  :straight t
+  :defer t)
 
 
 (provide 'azoth-env)

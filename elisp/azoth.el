@@ -23,6 +23,7 @@
 (require 'azoth-env)
 (require 'azoth-completion)
 (require 'azoth-project)
+(require 'azoth-search)
 (require 'azoth-misc)
 (require 'azoth-ui)
 (require 'azoth-magit)
