@@ -20,6 +20,7 @@
 ;;; Code:
 
 (require 'azoth-repo)
+(require 'azoth-env)
 (require 'azoth-completion)
 (require 'azoth-project)
 (require 'azoth-misc)
@@ -28,6 +29,7 @@
 (require 'sulfur)
 (require 'mercury)
 (require 'azoth-lisp)
+(require 'azoth-paren)
 (require 'azoth-eshell)
 (require 'azoth-web)
 
