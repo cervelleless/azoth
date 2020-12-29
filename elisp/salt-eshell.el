@@ -1,4 +1,4 @@
-;;; azoth-eshell.el --- Eshell -*- lexical-binding: t; -*-
+;;; salt-eshell.el --- Eshell -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelleless
 ;;
@@ -40,5 +40,5 @@
 
 
 
-(provide 'azoth-eshell)
-;;; azoth-eshell.el ends here
+(provide 'salt-eshell)
+;;; salt-eshell.el ends here

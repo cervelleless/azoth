@@ -1,4 +1,4 @@
-;;; azoth-repo.el --- package manager with straight and use-package -*- lexical-binding: t; -*-
+;;; salt-repo.el --- package manager with straight and use-package -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelleless
 ;;
@@ -56,5 +56,5 @@
   :straight t
   :defer t)
 
-(provide 'azoth-repo)
-;;; azoth-repo.el ends here
+(provide 'salt-repo)
+;;; salt-repo.el ends here

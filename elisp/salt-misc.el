@@ -1,4 +1,4 @@
-;;; azoth-misc.el --- Some useful packages -*- lexical-binding: t; -*-
+;;; salt-misc.el --- Some useful packages -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelle
 ;;
@@ -113,5 +113,5 @@
   (setq ispell-program-name "/usr/local/bin/aspell")
   :hook (emacs-lisp-mode . flyspell-prog-mode))
 
-(provide 'azoth-misc)
-;;; azoth-misc.el ends here
+(provide 'salt-misc)
+;;; salt-misc.el ends here

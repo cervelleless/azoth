@@ -1,4 +1,4 @@
-;;; azoth-project.el --- project manager -*- lexical-binding: t; -*-
+;;; salt-project.el --- project manager -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelle
 ;;
@@ -31,5 +31,5 @@
         projectile-ignored-projects '("~/" "/tmp")))
 
 
-(provide 'azoth-project)
-;;; azoth-project.el ends here
+(provide 'salt-project)
+;;; salt-project.el ends here

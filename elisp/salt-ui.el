@@ -1,4 +1,4 @@
-;;; azoth-ui.el --- ui with modus-themes -*- lexical-binding: t; -*-
+;;; salt-ui.el --- ui with modus-themes -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelleless
 ;;
@@ -93,5 +93,5 @@
 
 
 
-(provide 'azoth-ui)
-;;; azoth-ui.el ends here
+(provide 'salt-ui)
+;;; salt-ui.el ends here

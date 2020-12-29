@@ -1,4 +1,4 @@
-;;; azoth-search.el --- search and replace -*- lexical-binding: t; -*-
+;;; salt-search.el --- search and replace -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelle
 ;;
@@ -26,5 +26,5 @@
 (use-package rg
   :straight t)
 
-(provide 'azoth-search)
-;;; azoth-search.el ends here
+(provide 'salt-search)
+;;; salt-search.el ends here

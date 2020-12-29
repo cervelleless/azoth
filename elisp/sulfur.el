@@ -37,7 +37,7 @@
   (add-to-ordered-list 'emulation-mode-map-alists `((sulfur-cmd-mode . ,sulfur-cmd-map)) 0))
 
 ;;;###autoload
-(define-globalized-minor-mode global-sulfur-cmd-mode sulfur-cmd-mode sulfur-cmd-mode)
+;; (define-globalized-minor-mode global-sulfur-cmd-mode sulfur-cmd-mode sulfur-cmd-mode)
 
 ;;;###autoload
 (defun enter-sulfur-cmd-mode ()
@@ -189,7 +189,7 @@
 	   ;; 		    (kill-word 1))))
 	   ;; ("d$" . (kill-line 1))
 	   ;; ("d0" . (kill-line 0))
-	   ("e" . nil)
+ 	   ("e" . nil)
 	   ("f" . nil)
 	   ("gg" . beginning-of-buffer)
 	   ("h" . (lambda () (interactive)
@@ -302,6 +302,8 @@
                                     (enter-sulfur-cmd-mode))))
 
 (define-key special-mode-map [remap scroll-up-command] 'mercury/body)
+(add-hook 'after-init-hook 'enter-sulfur-cmd-mode)
+
 
 (provide 'sulfur)
 ;;; sulfur.el ends here

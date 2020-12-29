@@ -1,4 +1,4 @@
-;;; azoth-completion.el --- selectrum framework -*- lexical-binding: t; -*-
+;;; salt-completion.el --- selectrum framework -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 Cervelleless
 ;;
@@ -64,5 +64,5 @@
   ;; switch between the annotators.
   (setq marginalia-annotators '(marginalia-annotators-heavy marginalia-annotators-light nil))
   :hook (selectrum-mode . marginalia-mode))
-(provide 'azoth-completion)
-;;; azoth-completion.el ends here
+(provide 'salt-completion)
+;;; salt-completion.el ends here

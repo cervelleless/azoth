@@ -1,4 +1,4 @@
-;;; azoth.el --- Here am I. -*- lexical-binding: t; -*-
+;;; salt.el --- Here am I. -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelle
 ;;
@@ -19,20 +19,20 @@
 ;;
 ;;; Code:
 
-(require 'azoth-repo)
-(require 'azoth-env)
-(require 'azoth-completion)
-(require 'azoth-project)
-(require 'azoth-search)
-(require 'azoth-misc)
-(require 'azoth-ui)
-(require 'azoth-magit)
+(require 'salt-repo)
+(require 'salt-env)
+(require 'salt-completion)
+(require 'salt-project)
+(require 'salt-search)
+(require 'salt-misc)
+(require 'salt-ui)
+(require 'salt-magit)
 (require 'sulfur)
 (require 'mercury)
-(require 'azoth-lisp)
-(require 'azoth-paren)
-(require 'azoth-eshell)
-(require 'azoth-web)
+(require 'salt-lisp)
+(require 'salt-paren)
+(require 'salt-eshell)
+(require 'salt-web)
 
-(provide 'azoth)
-;;; azoth.el ends here
+(provide 'salt)
+;;; salt.el ends here

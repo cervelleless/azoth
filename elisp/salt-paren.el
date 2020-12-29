@@ -1,4 +1,4 @@
-;;; azoth-paren.el --- parenthesis. -*- lexical-binding: t; -*-
+;;; salt-paren.el --- parenthesis. -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelle
 ;;
@@ -30,5 +30,5 @@
   :hook ((text-mode . electric-pair-mode)
 	 (prog-mode . electric-pair-mode)))
 
-(provide 'azoth-paren)
-;;; azoth-paren.el ends here
+(provide 'salt-paren)
+;;; salt-paren.el ends here

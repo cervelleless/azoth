@@ -1,4 +1,4 @@
-;;; azoth-web.el --- web development -*- lexical-binding: t; -*-
+;;; salt-web.el --- web development -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelleless
 ;;
@@ -51,5 +51,5 @@
   :straight t
   :defer t)
 
-(provide 'azoth-web)
-;;; azoth-web.el ends here
+(provide 'salt-web)
+;;; salt-web.el ends here

@@ -27,6 +27,7 @@
 (defhydra mercury (:color blue :columns 5)
   "Launch!"
   ("b" mercury-buffers/body "+buffers")
+  ("e" mercury-emacs/body "+emacs")
   ("f" mercury-files/body "+files")
   ("h" mercury-help/body "+help & info")
   ("p" mercury-project/body "+projects")
@@ -36,7 +37,7 @@
   ("SPC" execute-extended-command "M-x")
   ("<escape>" enter-sulfur-cmd-mode "Exit"))
 
-;; Help & Info
+;; Help, Info and so on
 (defhydra mercury-help (:color blue :columns 5)
   "Help & Info"
   ("f" helpful-callable "Describe function")
@@ -47,7 +48,16 @@
   ("v" helpful-variable "Describe variable")
   ("<escape>" enter-sulfur-cmd-mode "Exit"))
 
-;; Help & Info
+;; mercury-emacs
+(defhydra mercury-emacs (:color blue :columns 5 :hint nil)
+  "
+Kill or Restart emacs:
+    _r_: Restart emacs    _q_: kill emacs
+"
+  ("r" restart-emacs)
+  ("q" kill-emacs))
+
+;; Search
 (defhydra mercury-search (:color blue :columns 5)
   "Search"
   ("a" anzu-query-replace "Anzu Query-Replace")

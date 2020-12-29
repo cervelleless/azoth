@@ -1,4 +1,4 @@
-;;; azoth-magit.el --- magit -*- lexical-binding: t; -*-
+;;; salt-magit.el --- magit -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 cervelleless
 ;;
@@ -25,5 +25,5 @@
   :defer t)
 
 
-(provide 'azoth-magit)
-;;; azoth-magit.el ends here
+(provide 'salt-magit)
+;;; salt-magit.el ends here

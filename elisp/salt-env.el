@@ -1,4 +1,4 @@
-;;; azoth-env.el --- environment variables and settings -*- lexical-binding: t; -*-
+;;; salt-env.el --- environment variables and settings -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2020 Cervelleless
 ;;
@@ -62,5 +62,5 @@
   :defer t)
 
 
-(provide 'azoth-env)
-;;; azoth-env.el ends here
+(provide 'salt-env)
+;;; salt-env.el ends here
