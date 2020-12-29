@@ -51,6 +51,10 @@
 (use-package git
   :defer t)
 
+;;; restart-emacs
+(use-package restart-emacs
+  :straight t
+  :defer t)
 
 (provide 'azoth-repo)
 ;;; azoth-repo.el ends here
