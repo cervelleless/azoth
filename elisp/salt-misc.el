@@ -79,9 +79,6 @@
 (use-package saveplace
   :hook (after-init . save-place-mode))
 
-(use-package auto-compile
-  :straight t
-  :defer t)
 
 (use-package rainbow-mode
   :straight t

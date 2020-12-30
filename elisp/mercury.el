@@ -53,9 +53,12 @@
   "
 Kill or Restart emacs:
     _r_: Restart emacs    _q_: kill emacs
+    _e_: Eshell
 "
+  ("e" eshell)
   ("r" restart-emacs)
-  ("q" kill-emacs))
+  ("q" kill-emacs)
+  ("<escape>" enter-sulfur-cmd-mode "Exit"))
 
 ;; Search
 (defhydra mercury-search (:color blue :columns 5)
@@ -108,9 +111,11 @@ Toggle:
   ("b" projectile-switch-to-buffer "Switch to project buffer")
   ("c" project-compile "Compile in project")
   ("d" projectile-remove-known-project "Remove known project")
+  ("e" projectile-run-eshell "invoke Eshell in project's root")
   ("f" projectile-find-file "Find file in project")
   ("i" projectile-invalidate-cache "Invalidate project cache")
   ("p" projectile-switch-project "Switch project")
+  ("r" projectile-recentf "projectile-recentf")
   ("<escape>" enter-sulfur-cmd-mode "Exit"))
 
 

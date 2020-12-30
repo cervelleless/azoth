@@ -38,6 +38,9 @@
 ;;
 (setq load-prefer-newer t)
 
+;; default directory
+(setq default-directory (concat (getenv "HOME") "/"))
+
 ;; GNUS cann't send email error
 (add-to-list 'exec-path "/usr/local/bin/")
 ;; shell-command-to-string error
