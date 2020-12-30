@@ -25,6 +25,7 @@
 (require 'salt-project)
 (require 'salt-search)
 (require 'salt-auto-compile)
+(require 'salt-outline)
 (require 'salt-misc)
 (require 'salt-ui)
 (require 'salt-magit)
