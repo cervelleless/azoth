@@ -24,6 +24,10 @@
   :straight t
   :defer t)
 
+(use-package key-chord
+  :straight t
+  :defer)
+
 (defvar sulfur-cmd-map (make-sparse-keymap)
   "Keymap for sulfur-cmd-mode.")
 
@@ -134,18 +138,21 @@
 (defun sulfur/colon-cmd ()
   "Ex-like command."
   (interactive)
-  (let ((key (read-string ":")))
-    (cond ((string= key "w") (call-interactively 'save-buffer))
-	  ((string= key "c") (message "%s is c" key))
-          ((string= key "wq") (progn (call-interactively 'save-buffer)
-                                     (kill-current-buffer)
-                                     (switch-to-buffer "*astrolabe*")))
-	  ((string= key "q") (when (kill-current-buffer)
-			       (switch-to-buffer "*astrolabe*")))
-	  ((string= key "q!") (progn (set-buffer-modified-p nil)
-				     (kill-current-buffer)
-				     (switch-to-buffer "*astrolabe*")))
-          (t (message "%s is undefined" key)))))
+  (let* ((key-str (split-string (read-string ":") " "))
+	 (key (nth 0 key-str))
+	 (arg (nth 1 key-str)))
+	 (cond ((string= key "w") (if arg
+				      (funcall-interactively 'write-file arg)
+				    (call-interactively 'save-buffer)))
+	       ((string= key "wq") (progn (call-interactively 'save-buffer)
+					  (kill-current-buffer)
+					  (switch-to-buffer "*astrolabe*")))
+	       ((string= key "q") (when (kill-current-buffer)
+				    (switch-to-buffer "*astrolabe*")))
+	       ((string= key "q!") (progn (set-buffer-modified-p nil)
+					  (kill-current-buffer)
+					  (switch-to-buffer "*astrolabe*")))
+	       (t (message "%s is undefined" key)))))
 
 ;;;###autoload
 (defun sulfur/quit-or-kmacro ()
@@ -181,15 +188,8 @@
 		     (progn (crux-smart-kill-line)
 			    (quit-sulfur-cmd-mode))))
 	   ("d" . sulfur/delete-relatives)
-	   ;; ("db" . backward-kill-word)
-	   ;; ("dd" . crux-kill-whole-line)
-	   ;; ("dw" . (lambda () (interactive)
-	   ;; 	     (progn (forward-word)
-	   ;; 		    (backward-word)
-	   ;; 		    (kill-word 1))))
-	   ;; ("d$" . (kill-line 1))
-	   ;; ("d0" . (kill-line 0))
- 	   ("e" . nil)
+ 	   ("e" . (lambda () (interactive)
+		    (funcall (key-binding (kbd "a"))))) ; test 
 	   ("f" . nil)
 	   ("gg" . beginning-of-buffer)
 	   ("h" . (lambda () (interactive)
