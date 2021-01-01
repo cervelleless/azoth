@@ -30,11 +30,13 @@
   ("e" mercury-emacs/body "+emacs")
   ("f" mercury-files/body "+files")
   ("h" mercury-help/body "+help & info")
+  ("j" mercury-dumb-jump/body "+dump jump")
   ("p" mercury-project/body "+projects")
   ("s" mercury-search/body "+search")
   ("t" mercury-toggles/body "+toggles")
   ("q" nil "cancel")
-  ("SPC" execute-extended-command "M-x")
+  (":" execute-extended-command "M-x")
+  ("SPC" scroll-up-command "Scrolls forward")
   ("<escape>" enter-sulfur-cmd-mode "Exit"))
 
 ;; Help, Info and so on
