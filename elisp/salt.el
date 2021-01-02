@@ -30,6 +30,7 @@
 (require 'sulfur)
 (require 'salt-outline)
 (require 'salt-dj)
+(require 'salt-files)
 (require 'salt-misc)
 (require 'salt-ui)
 (require 'salt-magit)

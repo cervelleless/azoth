@@ -52,15 +52,6 @@
   (setq counsel-describe-function-function #'helpful-callable)
   (setq counsel-describe-variable-function #'helpful-variable))
 
-;; recentf
-(use-package recentf
-  :straight t
-  :defer t
-  :commands recentf-mode
-  :config
-  (setq recentf-max-saved-items 200
-        recentf-max-menu-items 15)
-  (recentf-mode))
 
 ;;; undo tree
 (use-package undo-tree
@@ -94,11 +85,6 @@
 
 ;; eazy-kill
 (use-package easy-kill
-  :straight t
-  :defer t)
-
-;; ranger
-(use-package ranger
   :straight t
   :defer t)
 
