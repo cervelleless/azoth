@@ -19,8 +19,33 @@
 ;;
 ;;; Code:
 
+;;; private folder
+(defvar salt-dir-private (expand-file-name "private" user-emacs-directory)
+  "All files you create under the private folder are yours for personalization.")
+
+;;; .local folder 
+(defvar salt-dir-local (expand-file-name ".local" user-emacs-directory)
+  "Folder of configure files, backup files, template files and so on.")
+
+;;; Cache folder
+(defvar salt-dir-cache (expand-file-name ".cache" user-emacs-directory))
+
+;;; Template folder
+(defvar salt-dir-template (expand-file-name "template" salt-dir-local)
+  "Folder path of template files.")
+
+;;; Create folders
+(dolist (dir (list salt-dir-private
+		   salt-dir-local
+		   salt-dir-cache
+		   salt-dir-template))
+  (when (not (file-directory-p dir))
+    (make-directory dir)))
+
+
 (require 'salt-repo)
 (require 'salt-env)
+(require 'salt-editor)
 (require 'salt-completion)
 (require 'salt-project)
 (require 'salt-search)
