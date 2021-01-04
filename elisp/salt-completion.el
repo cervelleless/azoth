@@ -26,7 +26,17 @@
 
 ;;; consult
 (use-package consult
-  :straight t)
+  :straight t
+  :init
+  (defun consult-fd (&optional dir)
+    "Search for regexp with fd in DIR."
+    (interactive "P")
+    (let ((consult-fd-cmd '("fd" "--color=never" "--full-path")))
+      (pcase-let ((`(,prompt . ,default-directory) (consult--directory-prompt "fd" dir)))
+	(consult--find prompt consult-fd-cmd))))
+  :config
+  (fset 'multi-occur #'consult-multi-occur))
+
 
 ;;; selectrum-prescient
 (use-package selectrum-prescient
