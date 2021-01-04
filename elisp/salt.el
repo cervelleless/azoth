@@ -28,7 +28,7 @@
   "Folder of configure files, backup files, template files and so on.")
 
 ;;; Cache folder
-(defvar salt-dir-cache (expand-file-name ".cache" user-emacs-directory))
+(defvar salt-dir-cache (expand-file-name "cache" salt-dir-local))
 
 ;;; Template folder
 (defvar salt-dir-template (expand-file-name "template" salt-dir-local)

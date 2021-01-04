@@ -28,6 +28,8 @@
   (setq projectile-completion-system 'default
         projectile-enable-caching t
         projectile-indexing-method 'hybrid
+	projectile-known-projects-file (expand-file-name "projectile.projects" salt-dir-cache)
+	projectile-cache-file (expand-file-name "projectile.cache" salt-dir-cache)
         projectile-ignored-projects '("~/" "/tmp")))
 
 

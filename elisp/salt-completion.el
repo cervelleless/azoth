@@ -41,8 +41,10 @@
 ;;; selectrum-prescient
 (use-package selectrum-prescient
   :straight t
+  :init
+  (setq prescient-save-file (expand-file-name "prescient-save.el" salt-dir-cache))
   :hook (selectrum-mode . prescient-persist-mode)
-        (selectrum-mode . selectrum-prescient-mode))
+  (selectrum-mode . selectrum-prescient-mode))
         
 ;;; consult-selectrum
 (use-package consult-selectrum
