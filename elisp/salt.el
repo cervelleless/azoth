@@ -65,6 +65,7 @@
 (require 'salt-org)
 (require 'salt-web)
 (require 'salt-rust)
+(require 'salt-ruby)
 
 (provide 'salt)
 ;;; salt.el ends here
