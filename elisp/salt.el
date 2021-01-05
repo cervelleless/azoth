@@ -67,5 +67,7 @@
 (require 'salt-rust)
 (require 'salt-ruby)
 
+(require 'salt-imselect)
+
 (provide 'salt)
 ;;; salt.el ends here
