@@ -6,15 +6,19 @@
 ;;
 ;;; Code:
 
-(setq auto-save-default nil ;; Turn off auto-save
-      make-backup-files nil ;; Turn off backu
-      create-lockfiles nil) ;; Stop creating .#lock file links 
+(setq auto-save-list-file-prefix nil
+      auto-save-default nil             ; Turn off auto-save
+      make-backup-files nil             ; Turn off backu
+      create-lockfiles nil)             ; Stop creating .#lock file links
 
 ;;; super save
 (use-package super-save
   :straight t
+  :diminish super-save-mode
   :hook
-  (after-init . super-save-mode))
+  (after-init . super-save-mode)
+  :config
+  (setq super-save-auto-save-when-idle t))
 
 (use-package saveplace
   :init
@@ -28,7 +32,7 @@
   :init
   (setq recentf-max-saved-items 200
         recentf-max-menu-items 15
-	recentf-save-file (expand-file-name "recentf" salt-dir-cache))
+        recentf-save-file (expand-file-name "recentf" salt-dir-cache))
   :hook (after-init . recentf-mode))
 
 (provide 'salt-editor)
