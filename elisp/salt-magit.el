@@ -22,8 +22,12 @@
 ;;; magit
 (use-package magit
   :straight t
+  :init
+  (setq transient-levels-file (expand-file-name "transient/levels" salt-dir-local)
+	transient-values-file (expand-file-name "transient/values" salt-dir-local)
+	transient-history-file (expand-file-name "transient/history" salt-dir-local))
   :defer t)
 
 
 (provide 'salt-magit)
-;;; salt-magit.el ends here
+;;; salt-magit.el ends here.
