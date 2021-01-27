@@ -35,8 +35,7 @@
   ("s" mercury-search/body "+search")
   ("t" mercury-toggles/body "+toggles")
   ("q" nil "cancel")
-  (":" execute-extended-command "M-x")
-  ("SPC" scroll-up-command "Scrolls forward")
+  ("SPC" execute-extended-command "M-x")
   ("<escape>" enter-sulfur-cmd-mode "Exit"))
 
 ;; Help, Info and so on
@@ -85,10 +84,11 @@ Kill or Restart emacs:
 (defhydra mercury-files (:color blue :columns 5 :hint nil)
   "
 +file:
-  _f_: Find file        _d_: deer        _q_: Previous page
+  _f_: Find file        _d_: deer        _g_: Ranger        _q_: Previous page
   _r_: Recent file      _s_: Save file"
   ("f" find-file)
   ("d" deer)
+  ("g" ranger)
   ("q" mercury/body)
   ("r" consult-recent-file)
   ("s" save-buffer)
